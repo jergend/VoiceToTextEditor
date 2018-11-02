@@ -68,6 +68,9 @@
             this.uxSoundLabel = new System.Windows.Forms.Label();
             this.uxTranscribeButton = new System.Windows.Forms.Button();
             this.uxExportAudioDialog = new System.Windows.Forms.SaveFileDialog();
+            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxFontDialog = new System.Windows.Forms.FontDialog();
             this.uxFileMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxProgressBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxVolumeControl)).BeginInit();
@@ -80,7 +83,8 @@
             this.uxFileMenu.BackColor = System.Drawing.SystemColors.MenuBar;
             this.uxFileMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.formatToolStripMenuItem});
             this.uxFileMenu.Location = new System.Drawing.Point(0, 0);
             this.uxFileMenu.Name = "uxFileMenu";
             this.uxFileMenu.Size = new System.Drawing.Size(854, 24);
@@ -161,7 +165,7 @@
             // 
             this.cutMenuStripItem.Name = "cutMenuStripItem";
             this.cutMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutMenuStripItem.Size = new System.Drawing.Size(144, 22);
+            this.cutMenuStripItem.Size = new System.Drawing.Size(152, 22);
             this.cutMenuStripItem.Text = "Cut";
             this.cutMenuStripItem.Click += new System.EventHandler(this.cutMenuStripItem_Click);
             // 
@@ -169,7 +173,7 @@
             // 
             this.copyMenuStripItem.Name = "copyMenuStripItem";
             this.copyMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyMenuStripItem.Size = new System.Drawing.Size(144, 22);
+            this.copyMenuStripItem.Size = new System.Drawing.Size(152, 22);
             this.copyMenuStripItem.Text = "Copy";
             this.copyMenuStripItem.Click += new System.EventHandler(this.copyMenuStripItem_Click);
             // 
@@ -177,7 +181,7 @@
             // 
             this.pasteMenuStripItem.Name = "pasteMenuStripItem";
             this.pasteMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteMenuStripItem.Size = new System.Drawing.Size(144, 22);
+            this.pasteMenuStripItem.Size = new System.Drawing.Size(152, 22);
             this.pasteMenuStripItem.Text = "Paste";
             this.pasteMenuStripItem.Click += new System.EventHandler(this.pasteMenuStripItem_Click);
             // 
@@ -194,7 +198,7 @@
             this.uxTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uxTextbox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxTextbox.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxTextbox.Location = new System.Drawing.Point(0, 122);
             this.uxTextbox.Multiline = true;
             this.uxTextbox.Name = "uxTextbox";
@@ -459,6 +463,26 @@
             // 
             this.uxExportAudioDialog.Filter = "WAV files (*.wav)|*.wav";
             // 
+            // formatToolStripMenuItem
+            // 
+            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fontMenuStripItem});
+            this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.formatToolStripMenuItem.Text = "Format";
+            // 
+            // fontMenuStripItem
+            // 
+            this.fontMenuStripItem.Name = "fontMenuStripItem";
+            this.fontMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.fontMenuStripItem.Text = "Font";
+            this.fontMenuStripItem.Click += new System.EventHandler(this.fontMenuStripItem_Click);
+            // 
+            // uxFontDialog
+            // 
+            this.uxFontDialog.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxFontDialog.ShowEffects = false;
+            // 
             // VoiceToText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,6 +557,9 @@
         private System.Windows.Forms.Label uxSoundLabel;
         private System.Windows.Forms.Button uxTranscribeButton;
         private System.Windows.Forms.SaveFileDialog uxExportAudioDialog;
+        private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fontMenuStripItem;
+        private System.Windows.Forms.FontDialog uxFontDialog;
     }
 }
 

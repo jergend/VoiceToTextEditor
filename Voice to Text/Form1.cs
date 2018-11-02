@@ -178,6 +178,14 @@ namespace Voice_to_Text
             }
         }
 
+        private void fontMenuStripItem_Click(object sender, EventArgs e)
+        {
+            if (uxFontDialog.ShowDialog() == DialogResult.OK)
+            {
+                uxTextbox.Font = uxFontDialog.Font;
+            }
+        }
+
         private void helpToolStripItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("I don't know man, Google it.");
