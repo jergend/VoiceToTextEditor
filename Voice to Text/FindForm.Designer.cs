@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.uxFindTextBox = new System.Windows.Forms.TextBox();
             this.uxFindButton = new System.Windows.Forms.Button();
             this.uxCancelButton = new System.Windows.Forms.Button();
             this.uxMatchCaseBox = new System.Windows.Forms.CheckBox();
@@ -44,12 +44,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Find what:";
             // 
-            // textBox1
+            // uxFindTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 20);
-            this.textBox1.TabIndex = 1;
+            this.uxFindTextBox.Location = new System.Drawing.Point(80, 21);
+            this.uxFindTextBox.Name = "uxFindTextBox";
+            this.uxFindTextBox.Size = new System.Drawing.Size(282, 20);
+            this.uxFindTextBox.TabIndex = 1;
             // 
             // uxFindButton
             // 
@@ -59,6 +59,7 @@
             this.uxFindButton.TabIndex = 2;
             this.uxFindButton.Text = "Find Next";
             this.uxFindButton.UseVisualStyleBackColor = true;
+            this.uxFindButton.Click += new System.EventHandler(this.uxFindButton_Click);
             // 
             // uxCancelButton
             // 
@@ -87,7 +88,7 @@
             this.Controls.Add(this.uxMatchCaseBox);
             this.Controls.Add(this.uxCancelButton);
             this.Controls.Add(this.uxFindButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.uxFindTextBox);
             this.Controls.Add(this.label1);
             this.Name = "FindForm";
             this.Text = "Find";
@@ -99,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox uxFindTextBox;
         private System.Windows.Forms.Button uxFindButton;
         private System.Windows.Forms.Button uxCancelButton;
         private System.Windows.Forms.CheckBox uxMatchCaseBox;

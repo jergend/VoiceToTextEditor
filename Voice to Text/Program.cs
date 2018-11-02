@@ -16,7 +16,7 @@ namespace Voice_to_Text
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VoiceToText());
+            Application.Run(new MainForm());
         }
     }
 }

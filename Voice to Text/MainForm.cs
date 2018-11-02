@@ -19,7 +19,7 @@ namespace Voice_to_Text
      * Install-Package Google.Cloud.Speech.V1 -Pre  *
      * Install-Package NAudio -Version 1.8.4        */
 
-    public partial class VoiceToText : Form
+    public partial class MainForm : Form
     {
         AxWMPLib.AxWindowsMediaPlayer wplayer = new AxWMPLib.AxWindowsMediaPlayer();
         Timer timer = new Timer();
@@ -37,7 +37,15 @@ namespace Voice_to_Text
         bool isRecording = false;
         bool hasRecorded = false;
 
-        public VoiceToText()
+        public TextBox TextBox
+        {
+            get
+            {
+                return uxTextbox;
+            }
+        }
+
+        public MainForm()
         {
             InitializeComponent();
 
@@ -180,7 +188,8 @@ namespace Voice_to_Text
 
         private void findMenuStripItem_Click(object sender, EventArgs e)
         {
-
+            FindForm ff = new FindForm(this);
+            ff.Show();
         }
 
         private void replaceMenuStripItem_Click(object sender, EventArgs e)
@@ -434,6 +443,14 @@ namespace Voice_to_Text
             else
             {
                 MessageBox.Show("No Audio File Found");
+            }
+        }
+
+        private void uxTextbox_TextChanged(object sender, EventArgs e)
+        {
+            if(uxTextbox.Text.Length != 0)
+            {
+                findMenuStripItem.Enabled = true;
             }
         }
     }
