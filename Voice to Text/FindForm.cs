@@ -25,6 +25,14 @@ namespace Voice_to_Text
             mf = form;
         }
 
+        private void uxFindTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (uxFindTextBox.Text.Length != 0)
+            {
+                uxFindButton.Enabled = true;
+            }
+        }
+
         private void uxFindButton_Click(object sender, EventArgs e)
         {
             if(isFirstFind)
@@ -51,6 +59,11 @@ namespace Voice_to_Text
                     MessageBoxIcon.Information);
                 isFirstFind = true;
             }
+        }
+
+        private void uxCancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private Regex GetRegExpression()

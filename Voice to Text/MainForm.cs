@@ -194,7 +194,8 @@ namespace Voice_to_Text
 
         private void replaceMenuStripItem_Click(object sender, EventArgs e)
         {
-
+            ReplaceForm rf = new ReplaceForm(this);
+            rf.Show();
         }
 
         private void selectAllMenuStripItem_Click(object sender, EventArgs e)
@@ -450,7 +451,10 @@ namespace Voice_to_Text
         {
             if(uxTextbox.Text.Length != 0)
             {
+                cutMenuStripItem.Enabled = true;
+                copyMenuStripItem.Enabled = true;
                 findMenuStripItem.Enabled = true;
+                replaceMenuStripItem.Enabled = true;
             }
         }
     }

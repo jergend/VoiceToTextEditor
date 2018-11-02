@@ -173,6 +173,7 @@
             // 
             // cutMenuStripItem
             // 
+            this.cutMenuStripItem.Enabled = false;
             this.cutMenuStripItem.Name = "cutMenuStripItem";
             this.cutMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.cutMenuStripItem.Size = new System.Drawing.Size(167, 22);
@@ -181,6 +182,7 @@
             // 
             // copyMenuStripItem
             // 
+            this.copyMenuStripItem.Enabled = false;
             this.copyMenuStripItem.Name = "copyMenuStripItem";
             this.copyMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copyMenuStripItem.Size = new System.Drawing.Size(167, 22);
@@ -211,6 +213,7 @@
             // 
             // replaceMenuStripItem
             // 
+            this.replaceMenuStripItem.Enabled = false;
             this.replaceMenuStripItem.Name = "replaceMenuStripItem";
             this.replaceMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.replaceMenuStripItem.Size = new System.Drawing.Size(167, 22);
