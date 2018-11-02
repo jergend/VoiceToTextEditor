@@ -15,6 +15,10 @@ using NAudio.Wave;
 
 namespace Voice_to_Text
 {
+    /*              NuGet Packages                  *
+     * Install-Package Google.Cloud.Speech.V1 -Pre  *
+     * Install-Package NAudio -Version 1.8.4        */
+
     public partial class VoiceToText : Form
     {
         AxWMPLib.AxWindowsMediaPlayer wplayer = new AxWMPLib.AxWindowsMediaPlayer();
