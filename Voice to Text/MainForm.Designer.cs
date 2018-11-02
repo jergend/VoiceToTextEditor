@@ -71,6 +71,11 @@
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uxFontDialog = new System.Windows.Forms.FontDialog();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.findMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.replaceMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectAllMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uxFileMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxProgressBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxVolumeControl)).BeginInit();
@@ -156,7 +161,12 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cutMenuStripItem,
             this.copyMenuStripItem,
-            this.pasteMenuStripItem});
+            this.pasteMenuStripItem,
+            this.toolStripMenuItem3,
+            this.findMenuStripItem,
+            this.replaceMenuStripItem,
+            this.toolStripMenuItem4,
+            this.selectAllMenuStripItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -165,7 +175,7 @@
             // 
             this.cutMenuStripItem.Name = "cutMenuStripItem";
             this.cutMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.cutMenuStripItem.Size = new System.Drawing.Size(167, 22);
             this.cutMenuStripItem.Text = "Cut";
             this.cutMenuStripItem.Click += new System.EventHandler(this.cutMenuStripItem_Click);
             // 
@@ -173,7 +183,7 @@
             // 
             this.copyMenuStripItem.Name = "copyMenuStripItem";
             this.copyMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.copyMenuStripItem.Size = new System.Drawing.Size(167, 22);
             this.copyMenuStripItem.Text = "Copy";
             this.copyMenuStripItem.Click += new System.EventHandler(this.copyMenuStripItem_Click);
             // 
@@ -181,7 +191,7 @@
             // 
             this.pasteMenuStripItem.Name = "pasteMenuStripItem";
             this.pasteMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.pasteMenuStripItem.Size = new System.Drawing.Size(167, 22);
             this.pasteMenuStripItem.Text = "Paste";
             this.pasteMenuStripItem.Click += new System.EventHandler(this.pasteMenuStripItem_Click);
             // 
@@ -483,6 +493,40 @@
             this.uxFontDialog.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxFontDialog.ShowEffects = false;
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(164, 6);
+            // 
+            // findMenuStripItem
+            // 
+            this.findMenuStripItem.Name = "findMenuStripItem";
+            this.findMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.findMenuStripItem.Size = new System.Drawing.Size(167, 22);
+            this.findMenuStripItem.Text = "Find...";
+            this.findMenuStripItem.Click += new System.EventHandler(this.findMenuStripItem_Click);
+            // 
+            // replaceMenuStripItem
+            // 
+            this.replaceMenuStripItem.Name = "replaceMenuStripItem";
+            this.replaceMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.replaceMenuStripItem.Size = new System.Drawing.Size(167, 22);
+            this.replaceMenuStripItem.Text = "Replace...";
+            this.replaceMenuStripItem.Click += new System.EventHandler(this.replaceMenuStripItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(164, 6);
+            // 
+            // selectAllMenuStripItem
+            // 
+            this.selectAllMenuStripItem.Name = "selectAllMenuStripItem";
+            this.selectAllMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.selectAllMenuStripItem.Size = new System.Drawing.Size(167, 22);
+            this.selectAllMenuStripItem.Text = "Select All";
+            this.selectAllMenuStripItem.Click += new System.EventHandler(this.selectAllMenuStripItem_Click);
+            // 
             // VoiceToText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +604,11 @@
         private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontMenuStripItem;
         private System.Windows.Forms.FontDialog uxFontDialog;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem findMenuStripItem;
+        private System.Windows.Forms.ToolStripMenuItem replaceMenuStripItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem selectAllMenuStripItem;
     }
 }
 

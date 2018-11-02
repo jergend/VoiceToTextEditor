@@ -178,6 +178,22 @@ namespace Voice_to_Text
             }
         }
 
+        private void findMenuStripItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void replaceMenuStripItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectAllMenuStripItem_Click(object sender, EventArgs e)
+        {
+            uxTextbox.SelectAll();
+            uxTextbox.Focus();
+        }
+
         private void fontMenuStripItem_Click(object sender, EventArgs e)
         {
             if (uxFontDialog.ShowDialog() == DialogResult.OK)
