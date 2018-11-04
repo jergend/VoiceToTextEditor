@@ -88,6 +88,30 @@ namespace Voice_to_Text
 
         private void importTranscriptMenuStripItem_Click(object sender, EventArgs e)
         {
+            if (savedText != uxTextbox.Text)
+            {
+                DialogResult exit = MessageBox.Show("Do you want to save changes to " + uxExportTranscriptDialog.FileName + "?",
+                    "Voice To Text Editor", MessageBoxButtons.YesNoCancel);
+
+                if (exit == DialogResult.Yes)
+                {
+                    if (uxExportTranscriptDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string fn = uxExportTranscriptDialog.FileName;
+                        string contents = uxTextbox.Text;
+
+                        try
+                        {
+                            File.WriteAllText(fn, contents);
+                            savedText = contents;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                    }
+                }
+            }
             if (uxImportDialog.ShowDialog() == DialogResult.OK)
             {
                 string fn = uxImportDialog.FileName;
