@@ -37,6 +37,8 @@ namespace Voice_to_Text
         bool isRecording = false;
         bool hasRecorded = false;
 
+        string savedText = "";
+
         public TextBox TextBox
         {
             get
@@ -112,6 +114,7 @@ namespace Voice_to_Text
                 try
                 {
                     File.WriteAllText(fn, contents);
+                    savedText = contents;
                 }
                 catch (Exception ex)
                 {
@@ -455,6 +458,46 @@ namespace Voice_to_Text
                 copyMenuStripItem.Enabled = true;
                 findMenuStripItem.Enabled = true;
                 replaceMenuStripItem.Enabled = true;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(savedText != uxTextbox.Text)
+            {
+                DialogResult exit = MessageBox.Show("Do you want to save changes to " + uxExportTranscriptDialog.FileName + "?",
+                    "Voice To Text Editor", MessageBoxButtons.YesNoCancel);
+
+                if(exit == DialogResult.Yes)
+                {
+                    if (uxExportTranscriptDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string fn = uxExportTranscriptDialog.FileName;
+                        string contents = uxTextbox.Text;
+
+                        try
+                        {
+                            File.WriteAllText(fn, contents);
+                            savedText = contents;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+                else if(exit == DialogResult.No)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

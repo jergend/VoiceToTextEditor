@@ -254,6 +254,7 @@
             // 
             // uxExportTranscriptDialog
             // 
+            this.uxExportTranscriptDialog.FileName = "Untitled";
             this.uxExportTranscriptDialog.Filter = "Text Documents (*.txt)|*.txt|All Files (*.*)|*.*";
             // 
             // uxTextbox
@@ -554,6 +555,7 @@
             this.MainMenuStrip = this.uxFileMenu;
             this.Name = "MainForm";
             this.Text = "Voice to Text Editor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.uxFileMenu.ResumeLayout(false);
             this.uxFileMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxProgressBar)).EndInit();
