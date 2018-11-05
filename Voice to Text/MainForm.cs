@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Google.Cloud.Speech.V1;
 using Google.Apis.Auth.OAuth2;
 using NAudio.Wave;
+using System.Collections;
 
 namespace Voice_to_Text
 {
@@ -39,6 +40,10 @@ namespace Voice_to_Text
 
         string savedText = "";
 
+        private Stack _editHistory = new Stack();
+        private Stack _undoHistory = new Stack();
+        private string _lastText = "";
+
         public TextBox TextBox
         {
             get
@@ -58,6 +63,8 @@ namespace Voice_to_Text
 
             comb.Location = new Point(300, 200);
             this.Controls.Add(comb);
+
+            pd.DocumentName = "Print Document";
 
             volume = uxVolumeControl.Value;
 
@@ -151,6 +158,17 @@ namespace Voice_to_Text
             }
         }
 
+        private void pageSetupMenuStripItem_Click(object sender, EventArgs e)
+        {
+            uxPageSetupDialog.Document = pd;
+
+            if(uxPageSetupDialog.ShowDialog() == DialogResult.OK)
+            {
+                pd.DefaultPageSettings = uxPageSetupDialog.PageSettings;
+                pd.PrinterSettings = uxPageSetupDialog.PrinterSettings;
+            }
+        }
+
         private void printMenuStripItem_Click(object sender, EventArgs e)
         {
             uxPrintDialog.Document = pd;
@@ -161,6 +179,48 @@ namespace Voice_to_Text
         private void exitMenuStripItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void undoMenuStripItem_Click(object sender, EventArgs e)
+        {
+            string editStr = (string)_editHistory.Pop(); // The string inserted or deleted by the edit being undone.
+            int loc = (int)_editHistory.Pop(); // The location of the edit to be undone
+            bool isDel = (bool)_editHistory.Pop(); // Indicates whether the edit to be undone was a deletion
+            DoEdit(uxTextbox, !isDel, loc, editStr); // Does the opposite of the edit being undone.
+
+            _undoHistory.Push(editStr);
+            _undoHistory.Push(loc);
+            _undoHistory.Push(isDel);
+            redoMenuStripItem.Enabled = true;
+            if (_editHistory.Count >= 1)
+            {
+                undoMenuStripItem.Enabled = true;
+            }
+            else
+            {
+                undoMenuStripItem.Enabled = false;
+            }
+        }
+
+        private void redoMenuStripItem_Click(object sender, EventArgs e)
+        {
+            bool isDel = (bool)_undoHistory.Pop(); // Indicates whether the edit to be redone was a deletion
+            int loc = (int)_undoHistory.Pop(); // The location of the edit to be redone
+            string editStr = (string)_undoHistory.Pop(); // The string inserted or deleted by the edit being redone.
+            DoEdit(uxTextbox, isDel, loc, editStr); // Does the edit being redone.
+
+            _editHistory.Push(isDel);
+            _editHistory.Push(loc);
+            _editHistory.Push(editStr);
+            undoMenuStripItem.Enabled = true;
+            if (_undoHistory.Count >= 1)
+            {
+                redoMenuStripItem.Enabled = true;
+            }
+            else
+            {
+                redoMenuStripItem.Enabled = false;
+            }
         }
 
         private void cutMenuStripItem_Click(object sender, EventArgs e)
@@ -233,6 +293,11 @@ namespace Voice_to_Text
         {
             uxTextbox.SelectAll();
             uxTextbox.Focus();
+        }
+
+        private void wordWrapMenuStripItem_Click(object sender, EventArgs e)
+        {
+            uxTextbox.WordWrap = wordWrapMenuStripItem.Checked;
         }
 
         private void fontMenuStripItem_Click(object sender, EventArgs e)
@@ -488,6 +553,78 @@ namespace Voice_to_Text
                 copyMenuStripItem.Enabled = true;
                 findMenuStripItem.Enabled = true;
                 replaceMenuStripItem.Enabled = true;
+            }
+            
+            if(uxTextbox.Modified)
+            {
+                RecordEdit();
+            }
+        }
+
+        private void RecordEdit()
+        {
+            bool isDel = IsDeletion(uxTextbox, _lastText); // Indicates whether the edit was a deletion
+            int len = GetEditLength(uxTextbox, _lastText); // The length of the string inserted or deleted
+            int loc = GetEditLocation(uxTextbox, isDel, len); // The location of the edit
+            string text = uxTextbox.Text; // The current editor content
+            string editStr = GetEditString(text, _lastText, isDel, loc, len); // The string deleted or inserted
+            _lastText = text;
+
+            _editHistory.Push(isDel);
+            _editHistory.Push(loc);
+            _editHistory.Push(editStr);
+            _undoHistory.Clear();
+            undoMenuStripItem.Enabled = true;
+            redoMenuStripItem.Enabled = false;
+        }
+
+        private bool IsDeletion(TextBox editor, string lastContent)
+        {
+            return editor.TextLength < lastContent.Length;
+        }
+
+        private int GetEditLength(TextBox editor, string lastContent)
+        {
+            return Math.Abs(editor.TextLength - lastContent.Length);
+        }
+
+        private int GetEditLocation(TextBox editor, bool isDeletion, int len)
+        {
+            if (isDeletion)
+            {
+                return editor.SelectionStart;
+            }
+            else
+            {
+                return editor.SelectionStart - len;
+            }
+        }
+
+        private string GetEditString(string content, string lastContent, bool isDeletion, int editLocation, int len)
+        {
+            if (isDeletion)
+            {
+                return lastContent.Substring(editLocation, len);
+            }
+            else
+            {
+                return content.Substring(editLocation, len);
+            }
+        }
+
+        private void DoEdit(TextBox editor, bool isDeletion, int loc, string text)
+        {
+            if (isDeletion)
+            {
+                _lastText = editor.Text.Remove(loc, text.Length);
+                editor.Text = _lastText;
+                editor.SelectionStart = loc;
+            }
+            else
+            {
+                _lastText = editor.Text.Insert(loc, text);
+                editor.Text = _lastText;
+                editor.SelectionStart = loc + text.Length;
             }
         }
 

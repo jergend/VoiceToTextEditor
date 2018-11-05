@@ -76,6 +76,12 @@
             this.uxTranscribeButton = new System.Windows.Forms.Button();
             this.uxExportAudioDialog = new System.Windows.Forms.SaveFileDialog();
             this.uxFontDialog = new System.Windows.Forms.FontDialog();
+            this.pageSetupMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxPageSetupDialog = new System.Windows.Forms.PageSetupDialog();
+            this.wordWrapMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.undoMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redoMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uxFileMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uxProgressBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxVolumeControl)).BeginInit();
@@ -103,6 +109,7 @@
             this.saveAsToolStripMenuItem,
             this.exportTranscriptMenuStripItem,
             this.toolStripMenuItem1,
+            this.pageSetupMenuStripItem,
             this.printMenuStripItem,
             this.toolStripMenuItem2,
             this.exitMenuStripItem});
@@ -141,7 +148,7 @@
             this.printMenuStripItem.Name = "printMenuStripItem";
             this.printMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printMenuStripItem.Size = new System.Drawing.Size(165, 22);
-            this.printMenuStripItem.Text = "Print";
+            this.printMenuStripItem.Text = "Print...";
             this.printMenuStripItem.Click += new System.EventHandler(this.printMenuStripItem_Click);
             // 
             // toolStripMenuItem2
@@ -159,6 +166,9 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.undoMenuStripItem,
+            this.redoMenuStripItem,
+            this.toolStripMenuItem5,
             this.cutMenuStripItem,
             this.copyMenuStripItem,
             this.pasteMenuStripItem,
@@ -236,6 +246,7 @@
             // formatToolStripMenuItem
             // 
             this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordWrapMenuStripItem,
             this.fontMenuStripItem});
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
@@ -244,8 +255,8 @@
             // fontMenuStripItem
             // 
             this.fontMenuStripItem.Name = "fontMenuStripItem";
-            this.fontMenuStripItem.Size = new System.Drawing.Size(98, 22);
-            this.fontMenuStripItem.Text = "Font";
+            this.fontMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.fontMenuStripItem.Text = "Font...";
             this.fontMenuStripItem.Click += new System.EventHandler(this.fontMenuStripItem_Click);
             // 
             // uxOpenDialog
@@ -533,6 +544,46 @@
             this.uxFontDialog.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxFontDialog.ShowEffects = false;
             // 
+            // pageSetupMenuStripItem
+            // 
+            this.pageSetupMenuStripItem.Name = "pageSetupMenuStripItem";
+            this.pageSetupMenuStripItem.Size = new System.Drawing.Size(165, 22);
+            this.pageSetupMenuStripItem.Text = "Page Setup...";
+            this.pageSetupMenuStripItem.Click += new System.EventHandler(this.pageSetupMenuStripItem_Click);
+            // 
+            // wordWrapMenuStripItem
+            // 
+            this.wordWrapMenuStripItem.Checked = true;
+            this.wordWrapMenuStripItem.CheckOnClick = true;
+            this.wordWrapMenuStripItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.wordWrapMenuStripItem.Name = "wordWrapMenuStripItem";
+            this.wordWrapMenuStripItem.Size = new System.Drawing.Size(152, 22);
+            this.wordWrapMenuStripItem.Text = "Word Wrap";
+            this.wordWrapMenuStripItem.Click += new System.EventHandler(this.wordWrapMenuStripItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(164, 6);
+            // 
+            // undoMenuStripItem
+            // 
+            this.undoMenuStripItem.Enabled = false;
+            this.undoMenuStripItem.Name = "undoMenuStripItem";
+            this.undoMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.undoMenuStripItem.Size = new System.Drawing.Size(167, 22);
+            this.undoMenuStripItem.Text = "Undo";
+            this.undoMenuStripItem.Click += new System.EventHandler(this.undoMenuStripItem_Click);
+            // 
+            // redoMenuStripItem
+            // 
+            this.redoMenuStripItem.Enabled = false;
+            this.redoMenuStripItem.Name = "redoMenuStripItem";
+            this.redoMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.redoMenuStripItem.Size = new System.Drawing.Size(167, 22);
+            this.redoMenuStripItem.Text = "Redo";
+            this.redoMenuStripItem.Click += new System.EventHandler(this.redoMenuStripItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,6 +667,12 @@
         private System.Windows.Forms.ToolStripMenuItem replaceMenuStripItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem selectAllMenuStripItem;
+        private System.Windows.Forms.ToolStripMenuItem pageSetupMenuStripItem;
+        private System.Windows.Forms.PageSetupDialog uxPageSetupDialog;
+        private System.Windows.Forms.ToolStripMenuItem wordWrapMenuStripItem;
+        private System.Windows.Forms.ToolStripMenuItem undoMenuStripItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem redoMenuStripItem;
     }
 }
 
