@@ -304,36 +304,37 @@ namespace Voice_to_Text
 
         private void uxRecordButton_Click(object sender, EventArgs e)
         {
-            uxPlayButton.Enabled = false;
-            uxPlayButton.BackColor = Color.LightGray;
-            uxPauseButton.Enabled = false;
-            uxPauseButton.BackColor = Color.LightGray;
-            uxProgressBar.Enabled = false;
-            uxSoundLabel.Enabled = false;
-            uxVolumeControl.Enabled = false;
-
             if(NAudio.Wave.WaveIn.DeviceCount < 1)
             {
                 MessageBox.Show("No microphone detected");
                 return;
             }
-
-            isRecording = true;
-            waveIn = new WaveIn();
-            waveIn.DataAvailable += new EventHandler<WaveInEventArgs>(waveIn_DataAvailable);
-            waveIn.RecordingStopped += new EventHandler<StoppedEventArgs>(waveIn_RecordingStopped);
-            waveIn.WaveFormat = new NAudio.Wave.WaveFormat(16000, 1);
+            
             if (uxExportAudioDialog.ShowDialog() == DialogResult.OK)
             {
+                uxPlayButton.Enabled = false;
+                uxPlayButton.BackColor = Color.LightGray;
+                uxPauseButton.Enabled = false;
+                uxPauseButton.BackColor = Color.LightGray;
+                uxProgressBar.Enabled = false;
+                uxSoundLabel.Enabled = false;
+                uxVolumeControl.Enabled = false;
+
+                isRecording = true;
+                waveIn = new WaveIn();
+                waveIn.DataAvailable += new EventHandler<WaveInEventArgs>(waveIn_DataAvailable);
+                waveIn.RecordingStopped += new EventHandler<StoppedEventArgs>(waveIn_RecordingStopped);
+                waveIn.WaveFormat = new NAudio.Wave.WaveFormat(16000, 1);
+
                 uxRecordButton.Enabled = false;
                 uxRecordButton.BackColor = Color.LightGray;
                 wplayer.URL = "";
                 writer = new WaveFileWriter(uxExportAudioDialog.FileName, waveIn.WaveFormat);
                 waveIn.StartRecording();
-            }
 
-            uxStopButton.Enabled = true;
-            uxStopButton.BackColor = SystemColors.Highlight;
+                uxStopButton.Enabled = true;
+                uxStopButton.BackColor = SystemColors.Highlight;
+            }
         }
 
         private void uxSoundLabel_Click(object sender, EventArgs e)
