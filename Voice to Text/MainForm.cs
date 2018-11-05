@@ -111,6 +111,10 @@ namespace Voice_to_Text
                         }
                     }
                 }
+                else if(exit == DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             if (uxImportDialog.ShowDialog() == DialogResult.OK)
             {
@@ -323,6 +327,7 @@ namespace Voice_to_Text
             {
                 uxRecordButton.Enabled = false;
                 uxRecordButton.BackColor = Color.LightGray;
+                wplayer.URL = "";
                 writer = new WaveFileWriter(uxExportAudioDialog.FileName, waveIn.WaveFormat);
                 waveIn.StartRecording();
             }
