@@ -298,6 +298,14 @@ namespace Voice_to_Text
         private void wordWrapMenuStripItem_Click(object sender, EventArgs e)
         {
             uxTextbox.WordWrap = wordWrapMenuStripItem.Checked;
+            if(!wordWrapMenuStripItem.Checked)
+            {
+                uxTextbox.ScrollBars = ScrollBars.Both;
+            }
+            else
+            {
+                uxTextbox.ScrollBars = ScrollBars.Vertical;
+            }
         }
 
         private void fontMenuStripItem_Click(object sender, EventArgs e)
