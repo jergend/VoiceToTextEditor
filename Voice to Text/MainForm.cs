@@ -13,6 +13,8 @@ using Google.Cloud.Speech.V1;
 using Google.Apis.Auth.OAuth2;
 using NAudio.Wave;
 using System.Collections;
+using Voice_to_Text.Properties;
+using System.Reflection;
 
 namespace Voice_to_Text
 {
@@ -512,7 +514,8 @@ namespace Voice_to_Text
         private void TranscribeAudio(string fn)
         {
             uxTextbox.Text = "";
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "MyProject31047-87c642b30d06.json");
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"MyProject31047-87c642b30d06.json");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path); 
             var speech = SpeechClient.Create();
             if(hasRecorded)
             {
