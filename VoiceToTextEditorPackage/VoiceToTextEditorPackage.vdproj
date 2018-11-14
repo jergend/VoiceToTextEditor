@@ -75,6 +75,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4DF09E064B904EF3BAFCE5CB3055ADC2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
         "OwnerKey" = "8:_AEDE43F7AEE84D85B17892700C7B5D2C"
         "MsmSig" = "8:_UNDEFINED"
@@ -82,19 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
-        "OwnerKey" = "8:_8B080A4A72B660789770D02A264F0126"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
-        "OwnerKey" = "8:_4334C5BEFA337D7E79A36179BEDF47FB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
-        "OwnerKey" = "8:_A1D2AFE226B78BA0168F00178B2C3888"
+        "OwnerKey" = "8:_8D9C6B21BAD52E3356632211921934C5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,7 +100,19 @@
         "Entry"
         {
         "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
-        "OwnerKey" = "8:_8D9C6B21BAD52E3356632211921934C5"
+        "OwnerKey" = "8:_A1D2AFE226B78BA0168F00178B2C3888"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
+        "OwnerKey" = "8:_4334C5BEFA337D7E79A36179BEDF47FB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
+        "OwnerKey" = "8:_8B080A4A72B660789770D02A264F0126"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -243,6 +249,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C4E3354D51F547D08F7C3E1A391A6937"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C5466B4CB6ACB1BDB3549B015B023BA6"
         "OwnerKey" = "8:_AEDE43F7AEE84D85B17892700C7B5D2C"
         "MsmSig" = "8:_UNDEFINED"
@@ -257,6 +269,12 @@
         {
         "MsmKey" = "8:_C5466B4CB6ACB1BDB3549B015B023BA6"
         "OwnerKey" = "8:_8D9C6B21BAD52E3356632211921934C5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D16FC09EBDEC40D69A13B503095DC713"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -293,6 +311,12 @@
         {
         "MsmKey" = "8:_D2CB6B03BEA58AEAB658DCEF85CB83CB"
         "OwnerKey" = "8:_C5466B4CB6ACB1BDB3549B015B023BA6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D65B63709E1C4C74A28F78531629B984"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -382,7 +406,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
+        "OwnerKey" = "8:_AEDE43F7AEE84D85B17892700C7B5D2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -395,12 +419,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7AC09B27A45C9AE72DFF488FEAA64171"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AEDE43F7AEE84D85B17892700C7B5D2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -499,6 +517,12 @@
         "OwnerKey" = "8:_151908EB4AE259C949805307ECE10999"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_50DB9756C0CB53B904FC92B9F622F0AA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -517,6 +541,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -533,6 +565,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -653,6 +701,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DF09E064B904EF3BAFCE5CB3055ADC2"
+            {
+            "SourcePath" = "8:..\\Voice to Text\\MyProject31047-87c642b30d06.json"
+            "TargetName" = "8:MyProject31047-87c642b30d06.json"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77B03961864514A38D91AD10207316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_50DB9756C0CB53B904FC92B9F622F0AA"
@@ -923,6 +991,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C4E3354D51F547D08F7C3E1A391A6937"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\School\\(5) K-State\\(5) Junior Year\\CIS 598\\15_512_i2P_icon.ico"
+            "TargetName" = "8:15_512_i2P_icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77B03961864514A38D91AD10207316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C5466B4CB6ACB1BDB3549B015B023BA6"
             {
             "AssemblyRegister" = "3:1"
@@ -952,6 +1040,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D16FC09EBDEC40D69A13B503095DC713"
+            {
+            "SourcePath" = "8:..\\Voice to Text\\bin\\Debug\\grpc_csharp_ext.x64.dll"
+            "TargetName" = "8:grpc_csharp_ext.x64.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77B03961864514A38D91AD10207316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D220D8287DC232396CB25E677A36458D"
@@ -1014,6 +1122,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D65B63709E1C4C74A28F78531629B984"
+            {
+            "SourcePath" = "8:..\\Voice to Text\\bin\\Debug\\grpc_csharp_ext.x86.dll"
+            "TargetName" = "8:grpc_csharp_ext.x86.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_1A77B03961864514A38D91AD10207316"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D9B71061493AC814B0A922B4BAE30D1F"
@@ -1242,7 +1370,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VoiceToTextEditorPackage"
         "ProductCode" = "8:{CB9FE9FD-669B-4E7A-8F37-1B1B8B460848}"
-        "PackageCode" = "8:{63C669FB-65DA-4319-A898-7B214E8E0EA3}"
+        "PackageCode" = "8:{1444B09F-ED3B-4601-BD00-57B607BAE5B0}"
         "UpgradeCode" = "8:{337274AE-6CDD-4E0B-82FA-7603020BCC19}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1255,11 +1383,11 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:VoiceToTextEditorPackage"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Derek Jergensen"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_C4E3354D51F547D08F7C3E1A391A6937"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -1362,6 +1490,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AA10CB2750AD4867A1E7A6681DA2EC66"
+            {
+            "Name" = "8:Voice to Text Editor"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AEDE43F7AEE84D85B17892700C7B5D2C"
+            "Folder" = "8:_FF95E9741EA845538DEC30CD3392C9D7"
+            "WorkingFolder" = "8:_1A77B03961864514A38D91AD10207316"
+            "Icon" = "8:_C4E3354D51F547D08F7C3E1A391A6937"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

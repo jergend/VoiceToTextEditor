@@ -417,6 +417,7 @@ namespace Voice_to_Text
             if (!isMuted)
             {
                 volume = uxVolumeControl.Value;
+                wplayer.settings.volume = 0;
                 uxVolumeControl.Value = 0;
                 uxSoundLabel.Text = "🔇";
                 isMuted = true;
@@ -424,6 +425,7 @@ namespace Voice_to_Text
             else
             {
                 uxVolumeControl.Value = volume;
+                wplayer.settings.volume = uxVolumeControl.Value * 10;
                 uxSoundLabel.Text = "🔊";
                 isMuted = false;
             }
@@ -514,8 +516,8 @@ namespace Voice_to_Text
         private void TranscribeAudio(string fn)
         {
             uxTextbox.Text = "";
-            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"MyProject31047-87c642b30d06.json");
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path); 
+            //string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"MyProject31047-87c642b30d06.json");
+            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "MyProject31047-87c642b30d06.json"); 
             var speech = SpeechClient.Create();
             if(hasRecorded)
             {
