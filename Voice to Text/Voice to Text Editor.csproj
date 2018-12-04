@@ -191,7 +191,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="15_512_0yg_icon.ico" />
     <Content Include="15_512_i2P_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
