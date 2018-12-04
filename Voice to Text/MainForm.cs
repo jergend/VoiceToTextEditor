@@ -320,7 +320,7 @@ namespace Voice_to_Text
 
         private void helpToolStripItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("I don't know man, Google it.");
+            MessageBox.Show("For help, open the README file located in the Program folder.");
         }
 
         private void uxProgressBar_Scroll(object sender, EventArgs e)
