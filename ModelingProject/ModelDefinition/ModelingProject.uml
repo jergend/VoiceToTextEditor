@@ -256,7 +256,7 @@
           </property>
           <property
             Id="48955096-b605-4b35-8694-d4e773192034"
-            name="undoHistory"
+            name="_undoHistory"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -763,7 +763,63 @@
         name="myComboBox"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="1162a93f-f967-4246-9973-9aa9c5f1f35e"
+            name="oldText"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2ae2819f-4fee-4c5a-9afa-e4e5fa5b61e7"
+            name="Copy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8e3d4429-67e7-4711-8d00-66bf91893b9f"
+            name="Cut"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b48a0d58-06fe-43ab-9554-c1abcbbd076c"
+            name="Paste"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4860aa46-6bcf-4aad-920f-8258d7f7d46b"
+            name="Undo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class

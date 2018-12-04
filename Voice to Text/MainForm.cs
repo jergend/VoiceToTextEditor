@@ -133,6 +133,7 @@ namespace Voice_to_Text
                 try
                 {
                     uxTextbox.Text = contents;
+                    _lastText = uxTextbox.Text;
                 }
                 catch (Exception ex)
                 {
@@ -453,6 +454,7 @@ namespace Voice_to_Text
             try
             {
                 TranscribeAudio(uxOpenDialog.FileName);
+                _lastText = uxTextbox.Text;
             }
             finally
             {
