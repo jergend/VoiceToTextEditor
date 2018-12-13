@@ -603,6 +603,7 @@
             this.Controls.Add(this.uxProgressBar);
             this.Controls.Add(this.uxTextbox);
             this.Controls.Add(this.uxFileMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.uxFileMenu;
             this.Name = "MainForm";
             this.Text = "Voice to Text Editor";
